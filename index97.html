@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<head>
+<title> Add Data </title>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+<script>
+    $(function() {
+        $("div:first").data("employee", {
+            name: "Иванов",
+            age: 27,
+            phone: "+375 29 217-77-77",
+            group: "20bsuinf"
+        });
+        $("button:first").click(function(){
+             $("p span:eq(0)").text($("div:first")
+                             .data("employee").name);
+             $("p span:eq(1)").text($("div:first")
+                             .data("employee").age); 
+             $("p span:eq(2)").text($("div:first")
+                             .data("employee").phone);     
+             $("p span:eq(3)").text($("div:first")
+                             .data("employee").group);
+         });
+         $("button:last").click(function() {
+             $("p span").empty();
+             $("div:first").removeData("employee");
+         });
+    });
+</script>
+</head>
+<body>
+<div></div>
+<p>Сотрудник: <span></span>, возраст <span></span> лет, телефон:
+<span></span></p>
+<button>Получить данные</button> <button>Удалить данные</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+  
+
+
+
+
+ 
+
+ 
+
